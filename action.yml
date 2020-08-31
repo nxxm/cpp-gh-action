@@ -1,1 +1,14 @@
+name: "nxxm_CI"
+author: nxxm_teams
+description: "Only for linux : Compile your code and give you back a build folder "
 
+
+
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "cloud"
+  color: "green"
