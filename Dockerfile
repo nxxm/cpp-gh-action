@@ -1,4 +1,13 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
+
+LABEL com.github.actions.name="nxxm CI"
+LABEL com.github.actions.description="Compile your code for linux"
+LABEL com.github.actions.icon="cloud"
+LABEL com.github.actions.color="red"
+
+LABEL repository="https://github.com/nxxm/nxxm_ci_docker"
+LABEL maintainer="Nxxm teams <damien@nxxm.io>"
+
 # Install needed tools
 RUN apt-get -y update && apt-get install -y software-properties-common git build-essential locales ninja-build cmake libssl-dev python
 RUN locale-gen "en_US.UTF-8"
