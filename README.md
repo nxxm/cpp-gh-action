@@ -8,7 +8,7 @@ Create a ``.yml`` file under ``.github/workflows`` with the following contents
 ### Default configuration
 
 ```yml
-name: flawfinder
+name: nxxm
 on: [push]
 
 jobs:
