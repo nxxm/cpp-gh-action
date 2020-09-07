@@ -18,6 +18,8 @@ RUN locale-gen "en_US.UTF-8"
 #RUN add-apt-repository ppa:jonathonf/gcc-7.1
 #RUN apt-get update
 RUN apt-get install -y gcc-7 g++-7
+RUN apt-get update && apt-get install -y \
+curl
 # Add script and run the script 
 ADD ./src/entrypoint.sh /entrypoint.sh
 CMD ["bash", "/entrypoint.sh"]
