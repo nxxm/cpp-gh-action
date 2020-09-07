@@ -29,3 +29,5 @@ echo "Files downloaded!"
 var_path_directory="/usr/local/files"
 
 /usr/local/bin/nxxm $var_path_directory  -t gcc-7-cxx17 --verbose 
+ /usr/local/bin/nxxm /home/runner/work/sandbox/sandbox -t gcc-7-cxx17 --verbose 
+
