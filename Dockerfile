@@ -1,8 +1,20 @@
 FROM ubuntu:latest
 
 
+ LABEL com.github.actions.name="nxxm CI"
+ LABEL com.github.actions.description="Compile your code for linux"
+ LABEL com.github.actions.icon="cloud"
+ LABEL com.github.actions.color="red"
+
+ LABEL repository="https://github.com/nxxm/nxxm_ci_docker"
+ LABEL maintainer="Nxxm teams <damien@nxxm.io>"
+
+
 # Install needed tools
-RUN apt-get -y update && apt-get install -y software-properties-common git build-essential locales ninja-build cmake libssl-dev python
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Europe/Paris
+RUN apt-get install -y tzdata
+RUN apt-get -y update && apt-get install -y software-properties-common git build-essential locales ninja-build cmake libssl-dev python -assume-yes apt-utils
 RUN locale-gen "en_US.UTF-8"
 RUN add-apt-repository ppa:jonathonf/gcc-7.1
 RUN apt-get update
