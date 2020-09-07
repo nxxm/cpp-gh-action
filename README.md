@@ -8,9 +8,12 @@ Create a ``.yml`` file under ``.github/workflows`` with the following contents
 ### Default configuration
 
 ```yml
-name: nxxm
-on: [push]
-
+name: CI
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 jobs:
   build:
     name: nxxm_CI
@@ -18,6 +21,6 @@ jobs:
     steps:
       - name: nxxm_CI 
         uses: nxxm/nxxm_ci_docker@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN}}
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
