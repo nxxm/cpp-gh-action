@@ -13,7 +13,6 @@ FROM ubuntu:latest
 # Install needed tools
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Paris
-RUN apt-get install -y tzdata
 RUN apt-get -y update && apt-get install -y software-properties-common git build-essential locales ninja-build cmake libssl-dev python -assume-yes apt-utils
 RUN locale-gen "en_US.UTF-8"
 RUN add-apt-repository ppa:jonathonf/gcc-7.1
