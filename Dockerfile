@@ -28,4 +28,5 @@ RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq &
   chmod +x /usr/local/bin/jq
 # Add script and run the script 
 ADD ./src/entrypoint.sh /entrypoint.sh
+COPY . .
 CMD ["bash", "/entrypoint.sh"]
