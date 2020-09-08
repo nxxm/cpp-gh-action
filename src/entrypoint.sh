@@ -13,13 +13,25 @@ var_path_directory2="/usr/bin/git"
 var_path_directory3="/usr/bin/git"
 
 
-
+cd /home/runner/work/sandbox/sandbox
 echo "************************* 1 *************************"
 /usr/local/bin/nxxm /home/runner/work/sandbox/sandbox  -t gcc-7-cxx17 --verbose 
+/usr/local/bin/nxxm /home/runner/work/sandbox/sandbox  --verbose 
 echo "************************* 2 *************************"
+cd /home/runner/work/sandbox/sandbox/.git
 /usr/local/bin/nxxm /home/runner/work/sandbox/sandbox/.git  -t gcc-7-cxx17 --verbose 
+/usr/local/bin/nxxm /home/runner/work/sandbox/sandbox/.git  --verbose 
+
 echo "************************* 3 *************************"
+cd /usr/bin/git
 /usr/local/bin/nxxm /usr/bin/git  -t gcc-7-cxx17 --verbose 
+/usr/local/bin/nxxm /usr/bin/git   --verbose 
+
+echo "************************* 4 *************************"
+cd $GITHUB_WORKSPACE
+/usr/local/bin/nxxm $GITHUB_WORKSPACE  -t gcc-7-cxx17 --verbose 
+/usr/local/bin/nxxm $GITHUB_WORKSPACE   --verbose 
+
 
 
 
