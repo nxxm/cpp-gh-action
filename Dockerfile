@@ -23,6 +23,8 @@ curl
 RUN apt-get update && apt-get install -y \
 unzip
 RUN apt-get update && apt-get install -y \
+zip
+RUN apt-get update && apt-get install -y \
 sudo
 RUN curl -o /usr/local/bin/jq http://stedolan.github.io/jq/download/linux64/jq && \
   chmod +x /usr/local/bin/jq
