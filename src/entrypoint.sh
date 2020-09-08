@@ -14,9 +14,11 @@ var_path_directory3="/usr/bin/git"
 
 
 
-
+echo "************************* 1 *************************"
 /usr/local/bin/nxxm /home/runner/work/sandbox/sandbox  -t gcc-7-cxx17 --verbose 
+echo "************************* 2 *************************"
 /usr/local/bin/nxxm /home/runner/work/sandbox/sandbox/.git  -t gcc-7-cxx17 --verbose 
+echo "************************* 3 *************************"
 /usr/local/bin/nxxm /usr/bin/git  -t gcc-7-cxx17 --verbose 
 
 
