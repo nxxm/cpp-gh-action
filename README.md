@@ -41,7 +41,6 @@ jobs:
     name: nxxm_CI
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - name: nxxm_CI 
         uses: nxxm/nxxm_ci_docker@master
       - name: Upload the build directory
