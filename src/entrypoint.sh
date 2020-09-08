@@ -9,6 +9,11 @@ fi
 
 cd $GITHUB_WORKSPACE
 /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t gcc-7-cxx17 --verbose 
+if [ $? -ne 0 ]; then
+echo "An error has occurred."
+echo "Please look at the logs."
+	exit 1
+fi
 
 zip -r build.zip ./build
 
