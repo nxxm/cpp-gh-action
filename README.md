@@ -95,9 +95,9 @@ jobs:
 
 ``configuration`` : Build type, defaults to optimized MinSizeRel build. ``MinSizeRel`` But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
-``only_exe`` :  ``disable``,  default value is ``enable`` Only builds the given executable.
+``only_exe`` : Default value is ``disable`` , ``enable`` : Only builds the given executable.
 
-``cpus`` :         How many CPU cores have to be dedicated to the build. example: ``3``
+``cpus`` : How many CPU cores have to be dedicated to the build. example: ``3``
 
-``use_cmake`` : ``disable``,  default value is ``enable`` Don't build by convention, use CMakeLists.txt at toplevel.
+``use_cmake`` : Default value is ``disable`` , ``enable`` : Don't build by convention, use CMakeLists.txt at toplevel.
 
