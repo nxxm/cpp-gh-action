@@ -17,7 +17,11 @@ fi
 
 zip -r build.zip ./build
 
-
+echo '************************ test luc ************************'
+echo "$INPUT_TARGET" 
+echo "$INPUT_CONFIGURATION"
+echo "$INPUT_ONLY_EXE"
+echo "$INPUT_CPUS"
 
 
 
