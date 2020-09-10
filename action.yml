@@ -2,6 +2,28 @@ name: "nxxm_CI"
 author: nxxm_teams
 description: "Only for linux : Compile your code and give you back a build folder "
 
+inputs:
+  target:
+    description: 'the target for which to build,defaults to linux'
+    required: false
+    default: 'gcc-7-cxx17'
+
+  configuration:
+    description: 'Build type, defaults to optimized MinSizeRel build'
+    required: false
+    default: 'MinSizeRel'
+    
+  only_exe:
+    description: 'Only builds the given executable'
+    required: false
+    default: 'false'
+    
+  cpus:
+    description: 'How many CPU cores have to be dedicated to the build'
+    required: false
+    default: '2'
+
+
 runs:
   using: "docker"
   image: "Dockerfile"
