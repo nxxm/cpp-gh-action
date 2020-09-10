@@ -93,7 +93,7 @@ jobs:
              For linux : ``gcc-7-cxx17``
              For webassembly : ``wasm-cxx17``
 
-``configuration`` : Build type, defaults to optimized MinSizeRel build. ``MinSizeRel`` But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
+``configuration`` : Build type, defaults to optimized MinSizeRel build.But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
 ``only_exe`` : Default value is ``disable`` , ``enable`` : Only builds the given executable.
 
