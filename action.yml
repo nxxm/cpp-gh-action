@@ -16,7 +16,7 @@ inputs:
   only_exe:
     description: 'Only builds the given executable'
     required: false
-    default: 'false'
+    default: 'disable'
     
   cpus:
     description: 'How many CPU cores have to be dedicated to the build'
