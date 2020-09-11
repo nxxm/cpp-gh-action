@@ -49,7 +49,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my_build
-          path: build.zip
+          path: build/
     env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
        
@@ -84,7 +84,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my_build
-          path: build.zip
+          path: build/
     env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
