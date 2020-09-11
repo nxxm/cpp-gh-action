@@ -9,17 +9,6 @@ fi
 
 cd $GITHUB_WORKSPACE
 
-echo "*************************** 1 ************************"
-
-echo "$INPUT_TARGET"
-echo "$INPUT_CONFIG"
-echo "$INPUT_JOBS"
-echo "$INPUT_USE_CMAKELISTS"
-echo "$INPUT_ONLY_EXE"
-echo "*************************** 2 ************************"
-
-
-
  /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t $INPUT_TARGET  -C $INPUT_CONFIGURATION -j $INPUT_JOBS  $INPUT_ONLY_EXE --verbose $INPUT_USE_CMAKELISTS
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
