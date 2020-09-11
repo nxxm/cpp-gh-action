@@ -45,7 +45,7 @@ inputs:
 
   extra_args:
     description: "You can enter all the other options of nxxm"
-    default: "-v"
+    default: "--verbose"
     required: false
 
 
