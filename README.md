@@ -73,15 +73,15 @@ jobs:
       - name: nxxm_CI 
         uses: nxxm/nxxm_ci_docker@master
         with: 
-          target: ''
-          sources: ''
-          exclude: ''
-          config: ''
-          jobs: ''
-          use_cmakelists: ''
-          test: ''
-          exclude_test: ''          
-          extra_args: ''
+          target: ""
+          sources: ""
+          exclude: ""
+          config: ""
+          jobs: ""
+          use_cmakelists: ""
+          test: ""
+          exclude_test: ""          
+          extra_args: ""
       - name: Upload the build directory
         uses: actions/upload-artifact@v2
         with:
