@@ -16,12 +16,12 @@ inputs:
   only_exe:
     description: 'Only builds the given executable'
     required: false
-    default: ""
+    default: " "
     
   use_cmakelists:
     description: ' Don't build by convention, use CMakeLists.txt at toplevel.'
     required: false
-    default: ""
+    default: " "
     
   jobs:
     description: 'How many CPU cores have to be dedicated to the build'
