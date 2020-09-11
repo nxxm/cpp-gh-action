@@ -13,12 +13,6 @@ inputs:
     default: "MinSizeRel"
     required: false
 
-  only_exe:
-    description: "Only builds the given executable"
-    default: ""
-    required: false
-
-  
   jobs:
     description: "How many CPU cores have to be dedicated to the build"
     default: "2"
