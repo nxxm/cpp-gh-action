@@ -9,37 +9,24 @@ fi
 
 cd $GITHUB_WORKSPACE
 
+echo "*************************** 1 ************************"
 
-if [ "$INPUT_ONLY_EXE" == "-o" ]
- then
-/usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" "$INPUT_ONLY_EXE" --verbose 
-if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
- elif [ "$INPUT_USE_CMAKELISTS" == "-u" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" "$INPUT_USE_CMAKELISTS" --verbose 
+echo "$INPUT_TARGET"
+echo "$INPUT_CONFIG"
+echo "$INPUT_JOBS"
+echo "$INPUT_USE_CMAKELISTS"
+echo "$INPUT_ONLY_EXE"
+echo "*************************** 2 ************************"
+
+
+
+ /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t $INPUT_TARGET -C $INPUT_CONFIGURATION -j $INPUT_JOBS $INPUT_USE_CMAKELISTS $INPUT_ONLY_EXE --verbose 
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
 echo "Please look at the logs."
 	exit 1
 fi
-elif [ "$INPUT_USE_CMAKE" == "-u" ] && [ "$INPUT_ONLY_EXE" == "-o" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" "$INPUT_USE_CMAKELISTS" "$INPUT_ONLY_EXE" --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
-else 
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS"  --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
-fi
+
 
 
 zip -r build.zip ./build
