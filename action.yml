@@ -7,15 +7,20 @@ inputs:
     description: "the target for which to build,defaults to webassembly"
     default: ""
     required: false
+    
+  sources:
+    description: "Directorie(s) containing the libs sources and headers. Defaults to project root. eg folder/path/ "
+    default: "-s ."
+    required: false
 
   config:
     description: "Build type, defaults to optimized MinSizeRel build"
-    default: "MinSizeRel"
+    default: "-C MinSizeRel"
     required: false
 
   jobs:
     description: "How many CPU cores have to be dedicated to the build"
-    default: "2"
+    default: "-j2"
     required: false
     
   use_cmakelists:
