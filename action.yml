@@ -12,6 +12,11 @@ inputs:
     description: "Directorie(s) containing the libs sources and headers. Defaults to project root. eg folder/path/ "
     default: "-s ."
     required: false
+    
+  exclude:
+    description: " Directories within project <dir> to exclude from source analysis. "
+    default: ""
+    required: false
 
   config:
     description: "Build type, defaults to optimized MinSizeRel build"
