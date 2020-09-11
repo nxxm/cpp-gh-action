@@ -96,8 +96,6 @@ jobs:
 
 ``configuration`` : Build type, defaults to optimized MinSizeRel build.But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
-``only_exe`` : Default value is ```` , ``-o`` : Only builds the given executable.
-
 ``jobs`` : How many CPU cores have to be dedicated to the build. example: ``3``
 
 ``use_cmakelists`` : Default value is ``disable`` , ``-u`` : Don't build by convention, use CMakeLists.txt at toplevel.
