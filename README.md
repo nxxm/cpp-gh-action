@@ -90,8 +90,9 @@ jobs:
 ### Input options
 
 ``target`` : Choice of the compilation target. 
-             For linux : ``gcc-7-cxx17``
-             For webassembly : ``wasm-cxx17``
+             For linux : ``-t gcc-7-cxx17``
+             For webassembly : ``-t wasm-cxx17``
+             In default nxxm choose -t wasm-cxx17
 
 ``configuration`` : Build type, defaults to optimized MinSizeRel build.But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
@@ -100,4 +101,6 @@ jobs:
 ``jobs`` : How many CPU cores have to be dedicated to the build. example: ``3``
 
 ``use_cmakelists`` : Default value is ``disable`` , ``-u`` : Don't build by convention, use CMakeLists.txt at toplevel.
+
+``etra-args`` : You can enter all the other options of nxxm
 
