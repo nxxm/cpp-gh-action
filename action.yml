@@ -4,30 +4,29 @@ description: "Only for linux : Compile your code and give you back a build folde
 
 inputs:
   target:
-    description: 'the target for which to build,defaults to linux'
-    required: false
+    description: "the target for which to build,defaults to webassembly"
     default: "wasm-cxx17"
+    required: false
 
   config:
-    description: 'Build type, defaults to optimized MinSizeRel build'
-    required: false
+    description: "Build type, defaults to optimized MinSizeRel build"
     default: "MinSizeRel"
-    
-  only_exe:
-    description: 'Only builds the given executable'
     required: false
-    default: "Disable"
-    
-  use_cmakelists:
-    description: ' Don't build by convention, use CMakeLists.txt at toplevel.'
-    required: false
-    default: "Disable"
-    
-  jobs:
-    description: 'How many CPU cores have to be dedicated to the build'
-    required: false
-    default: "2"
 
+  only_exe:
+    description: "Only builds the given executable"
+    default: ""
+    required: false
+
+  jobs:
+    description: "How many CPU cores have to be dedicated to the build"
+    default: "2"
+    required: false
+
+  use_cmakelists:
+    description: "Don't build by convention, use CMakeLists.txt at toplevel"
+    default: ""
+    required: false
 
 runs:
   using: "docker"
