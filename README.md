@@ -78,10 +78,10 @@ jobs:
           exclude: ''
           config: ''
           jobs: ''
-          use-cmakelists: ''
+          use_cmakelists: ''
           test: ''
-          exclude-test: ''          
-          extra-args: ''
+          exclude_test: ''          
+          extra_args: ''
       - name: Upload the build directory
         uses: actions/upload-artifact@v2
         with:
@@ -113,7 +113,7 @@ jobs:
 ``test`` :  ``--test`` : Whether to run the tests built ( i.e. .cpp files found in test[s]/ or example[s]/ folder)
             ``--test=all`` runs the full test suite, ``--test=example/mytest`` runs mytest.
 
-``exclude-test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
+``exclude_test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
 
-``etra-args`` : You can enter all the other options of nxxm
+``etra_args`` : You can enter all the other options of nxxm
 
