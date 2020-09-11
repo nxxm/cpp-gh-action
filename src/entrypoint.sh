@@ -18,10 +18,6 @@ fi
 
 
 
-zip -r build.zip ./build
-
-
-
 
 
 
