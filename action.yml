@@ -18,14 +18,20 @@ inputs:
     default: ""
     required: false
 
+  
   jobs:
     description: "How many CPU cores have to be dedicated to the build"
     default: "2"
     required: false
-
+    
   use_cmakelists:
     description: "Don't build by convention, use CMakeLists.txt at toplevel"
     default: ""
+    required: false
+
+  extra-args:
+    description: "You can enter all the other options of nxxm"
+    default: "-v"
     required: false
 
 runs:
