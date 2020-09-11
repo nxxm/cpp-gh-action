@@ -20,7 +20,7 @@ echo "*************************** 2 ************************"
 
 
 
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t $INPUT_TARGET $INPUT_USE_CMAKELISTS -C $INPUT_CONFIGURATION -j $INPUT_JOBS  $INPUT_ONLY_EXE --verbose 
+ /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t $INPUT_TARGET  -C $INPUT_CONFIGURATION -j $INPUT_JOBS  $INPUT_ONLY_EXE --verbose $INPUT_USE_CMAKELISTS
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
 echo "Please look at the logs."
