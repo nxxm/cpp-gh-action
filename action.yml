@@ -5,7 +5,7 @@ description: "Only for linux : Compile your code and give you back a build folde
 inputs:
   target:
     description: "the target for which to build,defaults to webassembly"
-    default: "wasm-cxx17"
+    default: ""
     required: false
 
   config:
