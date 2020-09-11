@@ -76,8 +76,8 @@ jobs:
           target: ''
           configuration: ''
           only_exe: ''
-          cpus: ''
-          use_cmake: ''
+          jobs: ''
+          use_cmakelists: ''
       - name: Upload the build directory
         uses: actions/upload-artifact@v2
         with:
@@ -95,9 +95,9 @@ jobs:
 
 ``configuration`` : Build type, defaults to optimized MinSizeRel build.But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
-``only_exe`` : Default value is ``disable`` , ``enable`` : Only builds the given executable.
+``only_exe`` : Default value is ```` , ``-o`` : Only builds the given executable.
 
-``cpus`` : How many CPU cores have to be dedicated to the build. example: ``3``
+``jobs`` : How many CPU cores have to be dedicated to the build. example: ``3``
 
-``use_cmake`` : Default value is ``disable`` , ``enable`` : Don't build by convention, use CMakeLists.txt at toplevel.
+``use_cmakelists`` : Default value is ``disable`` , ``-u`` : Don't build by convention, use CMakeLists.txt at toplevel.
 
