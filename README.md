@@ -99,8 +99,8 @@ jobs:
 ``sources`` : Directorie(s) containing the libs sources and headers. Defaults to project root. eg  ``-s folder/path/`` 
               Repeat to add many dirs e.g.  ``-s include -s src ``
   
- ``exclude`` : Directories within project <dir> to exclude from source analysis.
-               Repeat to exclude multiple dirs e.g.  ``-x=benchmark/ -x=test/``
+ ``exclude`` : Directories within project dir to exclude from source analysis 
+               Repeat to exclude multiple dirs e.g.  ``-x="benchmark/" -x="test/"``
 
 ``config`` : Build type, defaults to optimized MinSizeRel build.But you can have ``-C MinSizeRel`` or ``-C Release`` or ``-C RelWithDebInfo`` or ``-C Debug``
 
