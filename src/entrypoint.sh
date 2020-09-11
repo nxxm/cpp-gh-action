@@ -9,36 +9,11 @@ fi
 
 cd $GITHUB_WORKSPACE
 
-
-if [ "$INPUT_ONLY_EXE" == "enable" ]
- then
-/usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" -o --verbose 
-if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
- elif [ "$INPUT_USE_CMAKE" == "enable" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" -u --verbose 
+/usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_JOBS"  "$INPUT_USE_CMAKELISTS" "$INPUT_ONLY_EXE" --verbose 
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
 echo "Please look at the logs."
 	exit 1
-fi
-elif [ "$INPUT_USE_CMAKE" == "enable" ] && [ "$INPUT_USE_CMAKE" == "enable" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" -u -o --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
-else 
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS"  --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
 fi
 
 
