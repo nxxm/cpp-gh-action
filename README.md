@@ -78,7 +78,9 @@ jobs:
           exclude: ''
           config: ''
           jobs: ''
-          use_cmakelists: ''
+          use-cmakelists: ''
+          test: ''
+          exclude-test: ''          
           extra-args: ''
       - name: Upload the build directory
         uses: actions/upload-artifact@v2
@@ -107,6 +109,11 @@ jobs:
 ``jobs`` : How many CPU cores have to be dedicated to the build. example: ``-j3``
 
 ``use_cmakelists`` :  ``-u`` : Don't build by convention, use CMakeLists.txt at toplevel.
+
+``test`` :  ``--test`` : Whether to run the tests built ( i.e. .cpp files found in test[s]/ or example[s]/ folder)
+            ``--test=all`` runs the full test suite, ``--test=example/mytest`` runs mytest.
+
+``exclude-test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
 
 ``etra-args`` : You can enter all the other options of nxxm
 
