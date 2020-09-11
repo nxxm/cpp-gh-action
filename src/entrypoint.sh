@@ -25,7 +25,7 @@ echo "An error has occurred."
 echo "Please look at the logs."
 	exit 1
 fi
-elif [ "$INPUT_USE_CMAKE" == "enable" ] && [ "$INPUT_USE_CMAKE" == "enable" ]
+elif [ "$INPUT_USE_CMAKE" == "-u" ] && [ "$INPUT_ONLY_EXE" == "-o" ]
  /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIGURATION" -j "$INPUT_CPUS" "$INPUT_USE_CMAKELISTS" "$INPUT_ONLY_EXE" --verbose 
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
