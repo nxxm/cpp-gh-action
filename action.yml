@@ -32,11 +32,22 @@ inputs:
     description: "Don't build by convention, use CMakeLists.txt at toplevel"
     default: ""
     required: false
+    
+  test:
+    description: "Whether to run the tests built"
+    default: "-v"
+    required: false
+    
+  exclude-test:
+    description: "regular expression to match test to exclude"
+    default: "-v"
+    required: false
 
   extra-args:
     description: "You can enter all the other options of nxxm"
     default: "-v"
     required: false
+
 
 runs:
   using: "docker"
