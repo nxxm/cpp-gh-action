@@ -6,27 +6,27 @@ inputs:
   target:
     description: 'the target for which to build,defaults to linux'
     required: false
-    default: 'gcc-7-cxx17'
+    default: "wasm-cxx17"
 
-  configuration:
+  config:
     description: 'Build type, defaults to optimized MinSizeRel build'
     required: false
-    default: 'MinSizeRel'
+    default: "MinSizeRel"
     
   only_exe:
     description: 'Only builds the given executable'
     required: false
-    default: 'disable'
+    default: ""
     
-  use_cmake:
+  use_cmakelists:
     description: ' Don't build by convention, use CMakeLists.txt at toplevel.'
     required: false
-    default: 'disable'
+    default: ""
     
-  cpus:
+  jobs:
     description: 'How many CPU cores have to be dedicated to the build'
     required: false
-    default: '2'
+    default: "2"
 
 
 runs:
