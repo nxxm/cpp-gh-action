@@ -9,37 +9,12 @@ fi
 
 cd $GITHUB_WORKSPACE
 
-
-if [ "$INPUT_ONLY_EXE" == "enable" ]
- then
-/usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIG" -j "$INPUT_JOBS" -o --verbose 
-if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
- elif [ "$INPUT_USE_CMAKELISTS" == "enable" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIG" -j "$INPUT_JOBS" -u --verbose 
+ /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIG" -j "$INPUT_JOBS"  "$INPUT_ONLY_EXE" "$INPUT_USE_CMAKELISTS" --verbose 
+ 
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
 echo "Please look at the logs."
 	exit 1
-	
-fi
-elif [ "$INPUT_USE_CMAKELISTS" == "enable" ] && [ "$INPUT_ONLY_EXE" == "enable" ]
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIG" -j "$INPUT_JOBS" -u -o --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
-else 
- /usr/local/bin/nxxm $GITHUB_WORKSPACE  -t "$INPUT_TARGET" -C "$INPUT_CONFIG" -j "$INPUT_JOBS"  --verbose 
- if [ $? -ne 0 ]; then
-echo "An error has occurred."
-echo "Please look at the logs."
-	exit 1
-fi
 fi
 
 
