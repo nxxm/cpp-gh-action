@@ -28,7 +28,7 @@ inputs:
     default: "-j2"
     required: false
     
-  use_cmakelists:
+  use-cmakelists:
     description: "Don't build by convention, use CMakeLists.txt at toplevel"
     default: ""
     required: false
