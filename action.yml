@@ -35,12 +35,12 @@ inputs:
     
   test:
     description: "Whether to run the tests built"
-    default: "-v"
+    default: ""
     required: false
     
   exclude_test:
     description: "regular expression to match test to exclude"
-    default: "-v"
+    default: ""
     required: false
 
   extra_args:
