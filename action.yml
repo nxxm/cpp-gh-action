@@ -52,6 +52,7 @@ inputs:
 runs:
   using: "docker"
   image: "docker://nxxm/nxxm-ubuntu"
+  add: "./main.sh /main.sh"
   entrypoint: "./main.sh"
   
 branding:
