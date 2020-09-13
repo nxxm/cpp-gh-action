@@ -51,8 +51,9 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://nxxm/nxxm-ubuntu"
+  image: "docker://debian:stretch-slim"
   entrypoint: "main.sh"
+  
 branding:
   icon: "cloud"
   color: "green"
