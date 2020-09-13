@@ -51,7 +51,8 @@ inputs:
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "docker://nxxm:nxxm-ubuntu"
+  entrypoint: "main.sh"
 branding:
   icon: "cloud"
   color: "green"
