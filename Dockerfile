@@ -1,6 +1,5 @@
 FROM nxxm/nxxm-ubuntu
 
-
  LABEL com.github.actions.name="nxxm CI"
  LABEL com.github.actions.description="Compile your code for linux"
  LABEL com.github.actions.icon="cloud"
