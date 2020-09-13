@@ -8,9 +8,9 @@ inputs:
     default: ""
     required: false
     
-  sources:
-    description: "Directorie(s) containing the libs sources and headers. Defaults to project root. eg folder/path/ "
-    default: "-s ."
+  dir:
+    description: "Directorie(s) containing what we will compile eg ./src "
+    default: ""
     required: false
     
   exclude:
