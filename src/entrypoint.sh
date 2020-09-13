@@ -5,8 +5,6 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 	exit 1
 fi
 
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/nxxm/nxxm/master/install/install_for_macos_linux.sh)"
-
 var_dir=""
 
 if [[ -z "$INPUT_DIR" ]]; then
