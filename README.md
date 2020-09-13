@@ -74,7 +74,7 @@ jobs:
         uses: nxxm/nxxm_ci_docker@master
         with: 
           target: ""
-          sources: ""
+          dir: ""
           exclude: ""
           config: ""
           jobs: ""
@@ -98,8 +98,7 @@ jobs:
              For webassembly : ``-t wasm-cxx17``
              In default nxxm choose -t wasm-cxx17
              
-``sources`` : Directorie(s) containing the libs sources and headers. Defaults to project root. eg  ``-s folder/path/`` 
-              Repeat to add many dirs e.g.  ``-s include -s src ``
+``dir`` : Base dir is filled by GitHub and contains all your pull request or push directory. but if you just want to compile a specific folder you can fill in the path to it, for e.g ``src/banana``.
   
  ``exclude`` : Directories within project dir to exclude from source analysis 
                Repeat to exclude multiple dirs e.g.  ``-x="benchmark/" -x="test/"``
