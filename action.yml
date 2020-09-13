@@ -52,7 +52,7 @@ inputs:
 runs:
   using: "docker"
   image: "docker://nxxm/nxxm-ubuntu"
-  entrypoint: "./main.sh"
+  entrypoint: "main.sh"
   
 branding:
   icon: "cloud"
