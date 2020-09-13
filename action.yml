@@ -48,11 +48,9 @@ inputs:
     default: "--verbose"
     required: false
 
-
 runs:
   using: "docker"
-  image: "docker://nxxm/nxxm-ubuntu"
-  entrypoint: "/src/entrypoint.sh"
+  image: "Dockerfile"
   
 branding:
   icon: "cloud"
