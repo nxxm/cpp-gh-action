@@ -5,9 +5,7 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 	exit 1
 fi
 
-cd ..
-ls -laR
-ls -la 
+
 var_dir=""
 
 if [[ -z "$INPUT_DIR" ]]; then
