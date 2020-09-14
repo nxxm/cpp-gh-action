@@ -98,7 +98,7 @@ jobs:
              For webassembly : ``-t wasm-cxx17``
              In default nxxm choose -t wasm-cxx17
              
-``dir`` : Base dir is filled by GitHub and contains all your pull request or push directory. but if you just want to compile a specific folder you can fill in the path to it, for e.g ``./src/banana``. Dont forget do write the ``./``
+``dir`` : Base dir is filled by GitHub and contains all your pull request or push directory. but if you just want to compile a specific folder you can fill in the path to it, for e.g ``./src/banana``.
   
  ``exclude`` : Directories within project dir to exclude from source analysis 
                Repeat to exclude multiple dirs e.g.  ``-x="benchmark/" -x="test/"``
