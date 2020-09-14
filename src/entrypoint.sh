@@ -5,7 +5,7 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 	exit 1
 fi
 
-cd /.root/.nxxm
+cd ${HOME}/.nxxm/
 ls -la 
 var_dir=""
 
