@@ -10,7 +10,7 @@ inputs:
     
   dir:
     description: "Directorie(s) containing what we will compile eg ./src "
-    default: "."
+    default: ""
     required: false
     
   exclude:
