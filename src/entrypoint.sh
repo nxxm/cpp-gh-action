@@ -13,7 +13,7 @@ cd /github/home/
 	fi
 fi 
 
-
+ls -la
 cd /github/home/.nxxm
 ls -la
 
