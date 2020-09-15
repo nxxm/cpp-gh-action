@@ -50,7 +50,8 @@ inputs:
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: nxxm/nxxm-ubuntu
+  entrypoint: 'src/entrypoint.sh'
   
 branding:
   icon: "cloud"
