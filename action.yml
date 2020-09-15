@@ -51,7 +51,7 @@ inputs:
 runs:
   using: "docker"
   image: "docker://nxxm/nxxm-ubuntu:latest"
-  entrypoint: 'src/entrypoint.sh'
+  entrypoint: $GITHUB_ACTION_PATH/src/entrypoint.sh
   
 branding:
   icon: "cloud"
