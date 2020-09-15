@@ -5,7 +5,6 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 	exit 1
 fi
 
-echo "$INPUT_NEED_SECRET"
 if [[ "$INPUT_NEED_SECRET" == "enable" ]]; then 
 cd /github/home/
  mkdir -p ./.nxxm
@@ -14,8 +13,7 @@ cd /github/home/
 	fi
 fi 
 
-cd /github/home/
-ls -la
+
 cd /github/home/.nxxm
 ls -la
 
