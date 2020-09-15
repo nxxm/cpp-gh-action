@@ -8,24 +8,9 @@ fi
 
 var_dir=".""$GITHUB_WORKSPACE""$INPUT_DIR"
 
-
-
-echo "****************** 1 ******************"
-echo "$GITHUB_WORKSPACE"
-echo "****************** 2 ******************"
-echo "$INPUT_DIR"
-echo "****************** 3 ******************"
-echo "$var_dir"
-echo "****************** 4 ******************"
-var_config=$(readlink -f "$var_dir")
-echo "$var_config"
-
-
-
 cd "$GITHUB_WORKSPACE"
 
-nxxm help 
-nxxm $var_config $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
+nxxm "$var_dir" $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
  if [ $? -ne 0 ]; then
 echo "An error has occurred."
 echo "Please look at the logs."
