@@ -50,7 +50,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: nxxm/nxxm-ubuntu
+  image: "docker://nxxm/nxxm-ubuntu:latest"
   entrypoint: 'src/entrypoint.sh'
   
 branding:
