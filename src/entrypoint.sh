@@ -16,10 +16,13 @@ echo "****************** 2 ******************"
 echo "$INPUT_DIR"
 echo "****************** 3 ******************"
 echo "$var_dir"
+echo "****************** 4 ******************"
+var_config=$(readlink -f "$var_dir")
+echo "$var_config"
+
 
 
 cd "$GITHUB_WORKSPACE"
-var_config=$(readlink -f "$var_dir")
 
 nxxm help 
 nxxm $var_config $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
