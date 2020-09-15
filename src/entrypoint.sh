@@ -6,7 +6,7 @@ if [[ -z "$GITHUB_TOKEN" ]]; then
 fi
 
 
-var_dir="./""$GITHUB_WORKSPACE""$INPUT_DIR"
+var_dir=".""$GITHUB_WORKSPACE""$INPUT_DIR"
 
 
 
