@@ -7,11 +7,6 @@ fi
 
 
 var_dir="$GITHUB_WORKSPACE""$INPUT_DIR"
-echo "*******************************"
-pwd
-echo "$var_dir"
-#cd $var_dir
-pwd
 
 nxxm $var_dir $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
  if [ $? -ne 0 ]; then
