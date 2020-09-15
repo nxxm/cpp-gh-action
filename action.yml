@@ -49,9 +49,13 @@ inputs:
     required: false
 
 runs:
-  using: "docker"
-  image: "docker://nxxm/nxxm-ubuntu:latest"
-  entrypoint: "/usr/bin/find /"
+  using: "composite"
+  runs-on: ubuntu-latest
+    container: nxxm/nxxm-ubuntu
+  steps: 
+    - name: nxxm builds project 
+    run: |
+      ${{ github.action_path }}/src/entrypoint.sh
   
 branding:
   icon: "cloud"
