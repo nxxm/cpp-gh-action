@@ -9,7 +9,7 @@ fi
 var_dir="$GITHUB_WORKSPACE""$INPUT_DIR"
 echo "*******************************"
 pwd
-echo "$vardir"
+echo "$var_dir"
 cd $var_dir
 pwd
 
