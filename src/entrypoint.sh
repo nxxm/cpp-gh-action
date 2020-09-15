@@ -17,7 +17,7 @@ fi
 echo "****************** 1 ******************"
 echo "$GITHUB_WORKSPACE"
 echo "****************** 2 ******************"
-echo"$INPUT_DIR"
+echo "$INPUT_DIR"
 echo "****************** 3 ******************"
 echo "$var_dir"
 
