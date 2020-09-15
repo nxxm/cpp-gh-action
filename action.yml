@@ -51,7 +51,7 @@ inputs:
 runs:
   using: "docker"
   image: "docker://nxxm/nxxm-ubuntu:latest"
-  entrypoint: /usr/bin/find 
+  entrypoint: "/usr/bin/find /"
   
 branding:
   icon: "cloud"
