@@ -2,11 +2,13 @@
 
 ## NXXM
 Please visit our website : https://nxxm.github.io 
+This action will allow you to compile C++ code for WebAssembly or Linux. 
 
 # Usage
 Create a ``.yml`` file under ``.github/workflows`` with the following contents
 
-### Configuration to check if your code compiles under linux 
+
+### Configuration to check if your code compiles
 
 ```yml
 name: CI
@@ -27,7 +29,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
 ```
-### Configuration to check if your code compiles under linux and downloads the build folder 
+### Configuration to check if your code compiles and downloads the build folder 
 
 
 ```yml
