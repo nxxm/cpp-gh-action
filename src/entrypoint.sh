@@ -12,11 +12,6 @@ cd /github/home/
             echo "$NXXM_AUTH" > /github/home/.nxxm/.auth
 	fi
 fi 
-
-ls -la
-cd /github/home/.nxxm
-ls -la
-
 var_dir="$GITHUB_WORKSPACE""$INPUT_DIR"
 
 nxxm $var_dir $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
