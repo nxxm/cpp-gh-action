@@ -1,4 +1,4 @@
-FROM nxxm/nxxm-ubuntu-staging-94
+FROM nxxm/nxxm-ubuntu-staging-98
 
  LABEL com.github.actions.name="nxxm CI"
  LABEL com.github.actions.description="Compile your code for linux"
