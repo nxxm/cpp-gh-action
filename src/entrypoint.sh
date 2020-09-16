@@ -21,6 +21,9 @@ cd ..
 cd ..
 ls -laR
 
+cd /usr/local/bin
+ls -la
+
 #nxxm $var_dir $INPUT_TARGET  $INPUT_TEST $INPUT_CONFIG $INPUT_EXCLUDE $INPUT_JOBS $INPUT_EXCLUDE_TEST $INPUT_EXTRA_ARGS $INPUT_USE_CMAKELISTS
 #if [ $? -ne 0 ]; then
 #echo "An error has occurred."
