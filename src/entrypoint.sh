@@ -21,6 +21,7 @@ cd ..
 cd ..
 ls -laR
 
+echo "*************************************"
 cd /usr/local/bin
 ls -la
 
