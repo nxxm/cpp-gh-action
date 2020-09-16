@@ -56,7 +56,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://nxxm-ubuntu-staging-94"
+  image: "docker://nxxm-ubuntu-staging-98"
   
 branding:
   icon: "cloud"
