@@ -1,4 +1,4 @@
-# nxxm_ci_docker
+# cpp-gh-action
 
 ## NXXM
 Please visit our website : https://nxxm.github.io 
@@ -25,8 +25,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: nxxm_CI 
         uses: nxxm/nxxm_ci_docker@master
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
         
 ```
 ### Configuration to check if your code compiles and downloads the build folder 
@@ -51,10 +50,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my_build
-          path: build/
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       
+          path: build/    
 ```
 
 ### Configuration to check if your code compiles and downloads the build folder with option 
@@ -91,7 +87,6 @@ jobs:
           name: my_build
           path: build/
     env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NXXM_AUTH: ${{ secrets.NXXM_AUTH }}
 
 ```
