@@ -136,7 +136,7 @@ jobs:
 
   - ``--dont-check-cli-arg `` : If you don't want to check if your options are okay 
           
-  - ``Options, arguments`` : -?, -h, --help
+  - ``-?, -h, --help `` : Options, arguments
       
   - ``-v, --verbose`` : Display usage information.
                         Be verbose and prints everything the companion knows.
