@@ -119,6 +119,6 @@ jobs:
 
 ``etra_args`` : You can enter all the other options of nxxm
 
-``need_secret`` : If you need to register to nxxm and if you use the Github secret (https://nxxm-docs.readthedocs.io/en/latest/08-continious-integration.html)
+``need_secret`` : ``enable`` :  If you need to register to nxxm and if you use the Github secret (https://nxxm-docs.readthedocs.io/en/latest/08-continious-integration.html)
 
 
