@@ -117,8 +117,26 @@ jobs:
 
 ``exclude_test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
 
-``etra_args`` : You can enter all the other options of nxxm
-
 ``need_secret`` : ``enable`` :  If you need to register to nxxm and if you use the Github secret (https://nxxm-docs.readthedocs.io/en/latest/08-continious-integration.html)
 
+``etra_args`` : You can enter all the other options of nxxm :
+     
+  - ``-s, --sources <"dir/">`` : Directorie(s) containing the libs sources and headers. Defaults to project root.
+                                 Repeat to add many dirs e.g. -s include -s src
 
+  - ``-o, --only `` : Only builds the given executable.
+      
+  - ``-n, --no-refresh`` : If the dependencies were already fetched once no online access is performed.
+                          Note: tags are only accessed once, and kept in local cache.
+      
+  - ``-D <YOUR_DEFINE[=value]> `` : (Pass any defines to your code, e.g. :
+                                    * -DBOOST_MPL_CFG_NO_PREPROCESSED_HEADERS
+                                    * -DBOOST_MPL_LIMIT_VECTOR_SIZE=50
+                                    * -DMYSTR="\"text\"" \n 
+
+  - ``--dont-check-cli-arg `` : If you don't want to check if your options are okay 
+          
+  - ``Options, arguments`` : -?, -h, --help
+      
+  - ``-v, --verbose`` : Display usage information.
+                        Be verbose and prints everything the companion knows.
