@@ -6,6 +6,10 @@ Please visit our website : https://nxxm.github.io
 # Usage
 Create a ``.yml`` file under ``.github/workflows`` with the following contents
 
+# Example
+
+You can find an example of how to use this GitHub action if you follow this link : https://github.com/nxxm/example-cpp-github-action
+
 ### Configuration to check if your code compiles
 
 ```yml
