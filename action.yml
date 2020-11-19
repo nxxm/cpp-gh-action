@@ -47,12 +47,7 @@ inputs:
     description: "You can enter all the other options of nxxm"
     default: "--verbose"
     required: false
-    
-  need_secret:
-    description: "If you have a nxxm secret and you will use it"
-    default: "disable"
-    required: false
-  
+     
 
 runs:
   using: "docker"
