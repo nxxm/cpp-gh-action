@@ -86,7 +86,6 @@ jobs:
           test: ""
           exclude_test: ""          
           extra_args: ""
-          need_secret: ""
       - name: Upload the build directory
         uses: actions/upload-artifact@v2
         with:
@@ -120,8 +119,6 @@ jobs:
             ``--test=all`` runs the full test suite, ``--test=example/mytest`` runs mytest.
 
 ``exclude_test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
-
-``need_secret`` : ``enable`` :  If you need to register to nxxm and if you use the Github secret (https://nxxm-docs.readthedocs.io/en/latest/08-continious-integration.html)
 
 ``etra_args`` : You can enter all the other options of nxxm :
      
