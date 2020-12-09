@@ -1,7 +1,8 @@
-# nxxm_ci_docker
+# cpp-gh-action
 
 ## NXXM
 Please visit our website : https://nxxm.github.io 
+This action will allow you to compile C++ code for WebAssembly or Linux. 
 
 # Usage
 Create a ``.yml`` file under ``.github/workflows`` with the following contents
@@ -9,6 +10,7 @@ Create a ``.yml`` file under ``.github/workflows`` with the following contents
 # Example
 
 You can find an example of how to use this GitHub action if you follow this link : https://github.com/nxxm/example-cpp-github-action
+
 
 ### Configuration to check if your code compiles
 
@@ -27,8 +29,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: nxxm_CI 
         uses: nxxm/nxxm_ci_docker@master
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
         
 ```
 ### Configuration to check if your code compiles and downloads the build folder 
@@ -53,10 +54,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: my_build
-          path: build/
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-       
+          path: build/    
 ```
 
 ### Configuration to check if your code compiles and downloads the build folder with option 
@@ -92,7 +90,6 @@ jobs:
           name: my_build
           path: build/
     env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         NXXM_AUTH: ${{ secrets.NXXM_AUTH }}
 
 ```
@@ -125,6 +122,7 @@ jobs:
      
   - ``-s, --sources <"dir/">`` : Directorie(s) containing the libs sources and headers. Defaults to project root.
                                  Repeat to add many dirs e.g. -s include -s src
+
 
   - ``-o, --only `` : Only builds the given executable.
       
