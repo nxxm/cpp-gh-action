@@ -20,17 +20,17 @@ inputs:
 
   config:
     description: "Build type, defaults to optimized MinSizeRel build"
-    default: "-C MinSizeRel"
+    default: "MinSizeRel"
     required: false
 
   jobs:
     description: "How many CPU cores have to be dedicated to the build"
-    default: "-j2"
+    default: "2"
     required: false
     
   use_cmakelists:
     description: "Don't build by convention, use CMakeLists.txt at toplevel"
-    default: ""
+    default: "false"
     required: false
     
   test:
