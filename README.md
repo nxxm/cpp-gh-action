@@ -100,25 +100,26 @@ jobs:
 ### Input options
 
 ``target`` : Choice of the compilation target. 
-             For linux : ``-t gcc-7-cxx17``
-             For webassembly : ``-t wasm-cxx17``
-             In default nxxm choose -t wasm-cxx17
+             For linux : ``gcc-7-cxx17``
+             For webassembly : ``wasm-cxx17``
+             In default nxxm choose wasm-cxx17
              
 ``dir`` : Base dir is filled by GitHub and contains all your pull request or push directory. but if you just want to compile a specific folder you can fill in the path to it, for e.g ``./src/banana``.
   
  ``exclude`` : Directories within project dir to exclude from source analysis 
-               Repeat to exclude multiple dirs e.g.  ``-x="benchmark/" -x="test/"``
+               Repeat to exclude multiple dirs e.g.  ``benchmark/ test/``
 
-``config`` : Build type, defaults to optimized MinSizeRel build.But you can have ``-C MinSizeRel`` or ``-C Release`` or ``-C RelWithDebInfo`` or ``-C Debug``
+``config`` : Build type, defaults to optimized MinSizeRel build.But you can have ``MinSizeRel`` or ``Release`` or ``RelWithDebInfo`` or ``Debug``
 
-``jobs`` : How many CPU cores have to be dedicated to the build. example: ``-j3``
+``jobs`` : How many CPU cores have to be dedicated to the build. example: ``3``
 
-``use_cmakelists`` :  ``-u`` : Don't build by convention, use CMakeLists.txt at toplevel.
+``use_cmakelists`` :  ``true``  : Don't build by convention, use CMakeLists.txt at toplevel.
 
-``test`` :  ``--test`` : Whether to run the tests built ( i.e. .cpp files found in test[s]/ or example[s]/ folder)
-            ``--test=all`` runs the full test suite, ``--test=example/mytest`` runs mytest.
+``test`` :   Whether to run the tests built ( i.e. .cpp files found in test[s]/ or example[s]/ folder)
+            ``all`` runs the full test suite, ``example/mytest`` runs mytest.
 
-``exclude_test`` :  ``--test-exclude`` : regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
+``exclude_test`` :   regular expression to match test to exclude. When --test=all is passed, this allows excluding a test or more.
+                     for example : ``mytest``
 
 ``etra_args`` : You can enter all the other options of nxxm :
      
