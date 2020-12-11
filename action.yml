@@ -20,17 +20,17 @@ inputs:
 
   config:
     description: "Build type, defaults to optimized MinSizeRel build"
-    default: "-C MinSizeRel"
+    default: "MinSizeRel"
     required: false
 
   jobs:
     description: "How many CPU cores have to be dedicated to the build"
-    default: "-j2"
+    default: ""
     required: false
     
   use_cmakelists:
     description: "Don't build by convention, use CMakeLists.txt at toplevel"
-    default: ""
+    default: "false"
     required: false
     
   test:
@@ -47,16 +47,13 @@ inputs:
     description: "You can enter all the other options of nxxm"
     default: "--verbose"
     required: false
-    
-  need_secret:
-    description: "If you have a nxxm secret and you will use it"
-    default: "disable"
-    required: false
-  
+     
 
 runs:
   using: "docker"
-  image: "Dockerfile"
+  image: "docker://nxxm/nxxm-ubuntu-staging-99:latest"
+  entrypoint: "/usr/local/bin/entrypoint_for_docker.sh"
+
   
 branding:
   icon: "cloud"
