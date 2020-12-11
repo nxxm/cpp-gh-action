@@ -1,29 +1,27 @@
-# cpp-gh-action
+# nxxm.io - cpp-gh-action
 
-## NXXM
-Please visit our website : https://nxxm.github.io 
-This action will allow you to compile C++ code for WebAssembly or Linux. 
+[nxxm.io](http://nxxm.io) allows to compile C & C++ software for any platform automatically providing the fitting build environment and software dependencies.
+
+This action will allow you to compile C++ code for any nxxm supported platform.
 
 # Usage
 Create a ``.yml`` file under ``.github/workflows`` with the following contents
 
 # Example
+A full example of a C & C++ program compiled with the nxxm/cpp-gh-action can be [found here](https://github.com/nxxm/example-cpp-github-action).
 
-You can find an example of how to use this GitHub action if you follow this link : https://github.com/nxxm/example-cpp-github-action
-
-
-### Configuration to check if your code compiles
+### How to use the action
 
 ```yml
 name: CI
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 jobs:
   build:
-    name: nxxm_CI
+    name: ci
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
