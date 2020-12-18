@@ -51,7 +51,7 @@ inputs:
 
 runs:
   using: "docker"
-  image: "docker://nxxm/nxxm-ubuntu-staging-99:latest"
+  image: "docker://nxxm/nxxm-ubuntu:latest"
   entrypoint: "/usr/local/bin/entrypoint_for_docker.sh"
 
   
